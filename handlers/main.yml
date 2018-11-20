@@ -1,0 +1,7 @@
+---
+# handlers file for satellite_install
+
+  - name: start and enable chrony
+    systemd:
+      name: chrony
+      enabled: True

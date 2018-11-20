@@ -1,0 +1,9 @@
+---
+# tasks file for satellite_install
+
+
+  - name: install the satellite rpm's
+    yum:
+      name: "{{ satellite_rpms }}"
+      state: installed
+    notify: start and enable chrony
