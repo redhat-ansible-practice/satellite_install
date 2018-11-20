@@ -7,3 +7,8 @@
       name: "{{ satellite_rpms }}"
       state: installed
     notify: start and enable chrony
+
+  - name: copy over the template satellite.answer.yml
+    template:
+      src: satellite-answer.yml.j2
+      dest: /etc/foreman-installer/scenarios.d/satellite-answers.yml
