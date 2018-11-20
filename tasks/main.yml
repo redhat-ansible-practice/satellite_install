@@ -12,3 +12,6 @@
     template:
       src: satellite-answer.yml.j2
       dest: /etc/foreman-installer/scenarios.d/satellite-answers.yml
+
+  - name: Run the satellite Installer
+    command: "satellite-installer --scenario satellite"
